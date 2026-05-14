@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@599&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: "IBM Plex Sans";
+            box-sizing:border-box;
+            margin:0;padding:0
+        }
+        .preview {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background-color: #000;
+        }
+        .bg-video {
+            filter: brightness(40%) contrast(110%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            object-fit: cover;
+        }
+        .container {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center;  
+            width: 100%;
+        }
+        .pre-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .pre-text .alert{
+            display:inline-flex;
+            align-items:center;
+            gap:10px;padding:7px 14px;
+            background:rgba(255,70,85,.08);
+            border:1px solid rgba(255,70,85,.3);
+            border-radius:99px;font-family:'Rajdhani';
+            font-size:12px;
+            letter-spacing:3px;
+            color: #ff4655 ;
+            text-transform:uppercase;
+            margin-bottom:18px
+        }
+        .pre-text .alert .dot{
+            width:7px;
+            height:7px;
+            border-radius:99px;
+            background:#ff4655;
+            box-shadow:0 0 10px #ff4655
+        }
+        .pre-text h1{
+            font-size:84px;
+            font-weight:800;
+            letter-spacing:1px;line-height:.95;
+            background:linear-gradient(90deg,#ffffff 0%,#fff 30%,#9c3ddc 100%);
+            -webkit-background-clip:text;
+            background-clip:text;
+            -webkit-text-fill-color:transparent;
+            margin-bottom:14px;
+            text-transform:uppercase
+        }
+        .pre-text .stat{
+            font-family:'Rajdhani';
+            font-size:10px;
+            letter-spacing:6px;
+            color: #8a93a6;
+            text-transform:uppercase;
+            margin-bottom:9px
+        }
+        .scroll-hint{
+            position:absolute;
+            bottom:30px;left:50%;
+            transform:translateX(-50%);
+            color:#8a93a6;
+            font-family:'Rajdhani';
+            font-size:11px;letter-spacing:3px;
+            text-transform:uppercase;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            gap:8px;
+            z-index:1
+        }
+        .scroll-hint .arrow{
+            width:30px;
+            height:32px;
+            border: 2px solid rgba(138, 147, 166, 0.2);
+            border-top: 2px solid #8a93a6;
+            border-radius: 50%;
+            background: transparent;
+            animation:spin 2s cubic-bezier(0.4, 0, 0.2, 1) infinite
+        }
+        @keyframes pulse{0%,100%{opacity:.4;height:24px}50%{opacity:1;height:40px}}
+        @keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+    </style>
+</head>
+<body>
+    <header class="preview">
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="src/pbw.mp4" type="video/mp4">
+        </video>
+        <div class="container">
+            <div class="pre-grid">
+                <div class="pre-text">
+                    <div class="alert"><span class="dot"></span> SYSTEM ALERT · CODE : 871</div>
+                    <h1>cheevitsophon</h1>
+                    <div class="stat">PERSONAL WEBSITE</div>
+                    <div class="stat">[ coming soon ]</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-hint">
+            <span>Hold your breathes</span>
+            <div class="arrow"></div>
+        </div>
+    </header>
+</body>
+</html>
